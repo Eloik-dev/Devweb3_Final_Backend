@@ -1,9 +1,9 @@
 import { Schema, model } from "mongoose";
-import { validateAdultAge } from "../common/util/validators";
-import { CustomValidationMessages } from "../common/util/validators";
+import { validateAdultAge } from "@src/common/util/validators";
+import { CustomValidationMessages } from "@src/common/util/validators";
 import { parseObject, TParseOnError } from "jet-validators/utils";
 import { isBoolean, isDate, isNumber, isString, isStringArray } from "jet-validators";
-import { IStock } from "./Stock";
+import { IStock } from "@src/models/Stock";
 
 export interface IUser {
   _id?: string;

@@ -2,12 +2,12 @@ import morgan from "morgan";
 import helmet from "helmet";
 import express, { Request, Response, NextFunction } from "express";
 import logger from "jet-logger";
-import BaseRouter from "./routes";
-import HttpStatusCodes from "./common/constants/HttpStatusCodes";
-import { RouteError } from "./common/util/route-errors";
-import { NodeEnvs } from "./common/constants";
+import BaseRouter from "@src/routes";
+import HttpStatusCodes from "@src/common/constants/HttpStatusCodes";
+import { RouteError } from "@src/common/util/route-errors";
+import { NodeEnvs } from "@src/common/constants";
 import cors from "cors";
-import Paths from "./common/constants/Paths";
+import Paths from "@src/common/constants/Paths";
 import cookieParser from "cookie-parser";
 
 import moduleAlias from "module-alias";

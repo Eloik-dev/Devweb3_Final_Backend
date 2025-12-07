@@ -1,4 +1,4 @@
-import { IUser, Users } from "../models/User";
+import { IUser, Users } from "@src/models/User";
 
 /**
  * Retourne tous les utilisateurs.

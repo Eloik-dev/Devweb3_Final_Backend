@@ -1,8 +1,8 @@
-import HttpStatusCodes from '@src/common/constants/HttpStatusCodes';
-import { IStock } from '@src/models/Stock';
+import HttpStatusCodes from "@src/common/constants/HttpStatusCodes";
+import { IStock } from "@src/models/Stock";
 
-import { IReq, IRes } from './common/types';
-import StockService from '@src/services/StockService';
+import { IReq, IRes } from "@src/routes/common/types";
+import StockService from "@src/services/StockService";
 
 /******************************************************************************
                                 Functions
@@ -35,7 +35,7 @@ async function getOne(req: IReq, res: IRes) {
   const { id } = req.params;
   const stock = await StockService.getOneID(id as string);
   if (!stock) {
-    return res.status(HttpStatusCodes.NOT_FOUND).json({ error: 'Stock non trouvé' });
+    return res.status(HttpStatusCodes.NOT_FOUND).json({ error: "Stock non trouvé" });
   }
   return res.status(HttpStatusCodes.OK).json({ stock });
 }

@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
-import { validateStockName } from "../common/util/validators";
-import { CustomValidationMessages } from "../common/util/validators";
+import { validateStockName } from "@src/common/util/validators";
+import { CustomValidationMessages } from "@src/common/util/validators";
 
 export interface IStock {
   _id: string;

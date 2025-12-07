@@ -1,7 +1,7 @@
-import JetonService from '@src/services/JetonService';
-import User from '@src/models/User';
-import { IReq, IRes } from './common/types';
-import { parseReq } from './common/util';
+import JetonService from "@src/services/JetonService";
+import User from "@src/models/User";
+import { IReq, IRes } from "@src/routes/common/types";
+import { parseReq } from "@src/routes/common/util/index";
 
 /******************************************************************************
                                 Constants

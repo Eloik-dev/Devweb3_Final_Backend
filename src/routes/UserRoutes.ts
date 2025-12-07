@@ -2,7 +2,7 @@ import HttpStatusCodes from "@src/common/constants/HttpStatusCodes";
 import UserService from "@src/services/UserService";
 import { IUser } from "@src/models/User";
 
-import { IReq, IRes } from "./common/types";
+import { IReq, IRes } from "@src/routes/common/types";
 import { token } from "morgan";
 
 /******************************************************************************
