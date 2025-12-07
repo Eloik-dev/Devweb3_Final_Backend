@@ -14,7 +14,12 @@ import Paths from "tests/common/Paths";
 
 const app = express();
 
-app.use(cors());
+const allowedOrigins = ["http://localhost:3000", "https://api.justin.intebec.ca"];
+app.use(
+  cors({
+    origin: allowedOrigins,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
