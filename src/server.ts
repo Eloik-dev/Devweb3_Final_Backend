@@ -2,7 +2,12 @@ import moduleAlias from "module-alias";
 
 const isProd = process.env.NODE_ENV === "production";
 const aliases = {
-  "@src": isProd ? "dist" : "src",
+  "@src/*": isProd ? "dist/*" : "src/*",
+  "@common/*": isProd ? "dist/common/*" : "src/common/*",
+  "@models/*": isProd ? "dist/models/*" : "src/models/*",
+  "@routes/*": isProd ? "dist/routes/*" : "src/routes/*",
+  "@services/*": isProd ? "dist/services/*" : "src/services/*",
+  "@repos/*": isProd ? "dist/repos/*" : "src/repos/*",
 };
 
 moduleAlias.addAliases(aliases);
