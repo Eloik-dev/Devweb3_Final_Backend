@@ -1,4 +1,4 @@
-import { IUser, Users } from "../models/User";
+import { IUser, Users } from '../models/User';
 
 /**
  * Retourne tous les utilisateurs.
@@ -42,7 +42,7 @@ async function addUser(user: IUser) {
 async function updateUser(user: IUser): Promise<IUser | null> {
   const userAModifier = await Users.findById({ _id: user._id });
   if (!userAModifier) {
-    throw new Error("User non trouvé");
+    throw new Error('User non trouvé');
   }
   userAModifier.name = user.name;
   userAModifier.email = user.email;

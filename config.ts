@@ -1,11 +1,11 @@
 /* eslint-disable n/no-process-env */
 
-import path from "path";
-import dotenv from "dotenv";
-import moduleAlias from "module-alias";
-import fs from "fs";
+import path from 'path';
+import dotenv from 'dotenv';
+import moduleAlias from 'module-alias';
+import fs from 'fs';
 
-const NODE_ENV = process.env.NODE_ENV ?? "development";
+const NODE_ENV = process.env.NODE_ENV ?? 'development';
 
 // Only load .env. files locally
 if (!process.env.VERCEL) {
@@ -22,6 +22,6 @@ if (!process.env.VERCEL) {
 }
 
 // Configure moduleAlias
-if (__filename.endsWith("js")) {
-  moduleAlias.addAlias("@src", __dirname + "/dist");
+if (__filename.endsWith('js')) {
+  moduleAlias.addAlias('@src', __dirname + '/dist');
 }

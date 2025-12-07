@@ -1,10 +1,10 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-import Paths from "@src/common/constants/Paths";
-import UserRoutes from "./UserRoutes";
-import StockRoutes from "./StockRoutes";
-import JetonRoutes from "./JetonRoutes";
-import authenticateToken from "@src/services/authenticateToken";
+import Paths from '@src/common/constants/Paths';
+import UserRoutes from './UserRoutes';
+import StockRoutes from './StockRoutes';
+import JetonRoutes from './JetonRoutes';
+import authenticateToken from '@src/services/authenticateToken';
 
 /******************************************************************************
                                 Setup

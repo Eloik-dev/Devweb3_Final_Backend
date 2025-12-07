@@ -1,8 +1,8 @@
-import HttpStatusCodes from "@src/common/constants/HttpStatusCodes";
-import UserService from "@src/services/UserService";
-import { IUser } from "@src/models/User";
+import HttpStatusCodes from '@src/common/constants/HttpStatusCodes';
+import UserService from '@src/services/UserService';
+import { IUser } from '@src/models/User';
 
-import { IReq, IRes } from "./common/types";
+import { IReq, IRes } from './common/types';
 
 /******************************************************************************
                                 Functions
@@ -20,7 +20,7 @@ async function getOne(req: IReq, res: IRes) {
   const { id } = req.params;
   const user = await UserService.getUserById(id as string);
   if (!user) {
-    return res.status(HttpStatusCodes.NOT_FOUND).json({ error: "User not found" });
+    return res.status(HttpStatusCodes.NOT_FOUND).json({ error: 'User not found' });
   }
   return res.status(HttpStatusCodes.OK).json({ user });
 }
@@ -59,7 +59,7 @@ async function login(req: IReq, res: IRes) {
 
     if (!email || !password) {
       return res.status(HttpStatusCodes.BAD_REQUEST).json({
-        error: "Email et mot de passe requis",
+        error: 'Email et mot de passe requis',
       });
     }
 
@@ -77,9 +77,9 @@ async function register(req: IReq, res: IRes) {
     const body = req.body as { user: IUser };
     const { user } = body;
 
-    if (!user || !user.email || !user.password || !user.name) {
+    if (!user?.email || !user.password || !user.name) {
       return res.status(HttpStatusCodes.BAD_REQUEST).json({
-        error: "Nom, email et mot de passe requis",
+        error: 'Nom, email et mot de passe requis',
       });
     }
 
